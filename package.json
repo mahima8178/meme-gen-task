@@ -1,0 +1,19 @@
+{
+  "name": "meme-gen-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "node index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adreameryx/trial1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adreameryx/trial1/issues"
+  },
+  "homepage": "https://github.com/adreameryx/trial1#readme"
+}
