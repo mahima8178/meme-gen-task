@@ -9,8 +9,7 @@ $(document).ready(function(){
     var img = document.getElementById('start-image');
     var fontSize = parseInt( $('#text_font_size').val() );
     var memeSize = parseInt( $('#canvas_size').val() );
-    var fontColor = parseInt($('#text'))
-
+ 
     // set form field properties
     $('#text_top_offset').attr('max', memeSize);
     $('#text_bottom_offset').attr('max', memeSize);
@@ -109,11 +108,7 @@ $(document).ready(function(){
   });
   $(document).on('input change', '#text_top_offset', function() {
   	$('#text_top_offset__val').text( $(this).val() );
-  	drawMeme();
-  });
-  $(document).on('input change', '#text_top_offset', function() {
-  	$('#text_top_offset__val').text( $(this).val() );
-  	drawMeme();
+    drawMeme();
   });
   $(document).on('input change', '#text_bottom_offset', function() {
   	$('#text_bottom_offset__val').text( $(this).val() );
@@ -135,14 +130,10 @@ $(document).ready(function(){
   	$('#canvas_size__val').text( $(this).val() );
   	drawMeme();
   });
-  $(document).on('input change', '.output render', function() {
-  	$('#text_stroke_color').text( $(this).spectrum());
+  $(document).on('input change', '#text_color', function() {
+  	$('#text_color_val').css( $(this).val() );
   	drawMeme();
   });
-
-
-
-
   $('#download_meme').click(function(e){
 		$(this).attr('href', canvas.toDataURL());
 		$(this).attr('download', 'meme.png');

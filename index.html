@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Meme Generator</title>
+		<title>MemeMakeDo</title>
     <!-- Stylesheets Included -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="vendors/js/jquery.color.min.js"></script>
 	</head>
 	<body>
-
-    <!-- Navbar Code Start -->
-	  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-		    <a class="navbar-brand" href="#">Meme Generator</a>
-	  </nav>
-    <!-- Navbar Code End -->
-
   	<div class="container">
+		<header>
+			<!-- Navbar Code Start -->
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+				<a class="navbar-brand" href="#">Meme-Make-Me-Do!</a>
+			  </nav>
+			<!-- Navbar Code End -->
+			</header>
+		      
       <!-- Page Heading Start -->
   		<div class="page-header">
-  			<h1><i class="fa fa-2x fa-paint-brush" aria-hidden="true"></i> Create your awesome Meme now!</h1>
+  			<h1><i class="fa fa-2x fa-paint-brush" aria-hidden="true"></i>Get Creative ,  Memer!</h1>
   		</div>
       <br>
       <!-- Page Heading End -->
@@ -34,11 +43,11 @@
   				<!-- END: Canvas rendering of generated Meme -->
 
           <!-- Download Link Start -->
-  				<a href="#" class="btn btn-primary btn-block" id="download_meme" style="margin-top:10px;">
-  					<i class="fa fa-download" aria-hidden="true"></i> Download
+  				<a href="#" class="btn btn-primary btn-dark" id="download_meme" style="margin-top:10px;">
+  					<i class="fa fa-download" aria-hidden="true"></i> Download Meme!
   				</a>
+				<img id="start-image" src="download.jpg" alt="" />
 
-					<img id="start-image" src="image.jpg" alt="" />
           <!-- Download Link End -->
   			</div>
         <!-- Left Part of Page End -->
@@ -63,14 +72,14 @@
           <!-- Inputting the top text : START -->
   				<label class="control-label" for="text_top">Text 1:</label>
   				<div class="form-group">
-  					<input type="text" class="form-control" value="Have you expected this to be" id="text_top" />
+  					<input type="text" class="form-control" value="Go on , meme artist" id="text_top" />
   				</div>
           <!-- Inputting the top text : END -->
 
           <!-- Slider for Text-1 offset from top : START -->
   				<div class="form-group">
   					<div class="row">
-  						<label class="control-label col-md-4" for="text_top_offset">Offset from top:</label>
+  						<label class="control-label col-md-4" for="text_top_offset">Top-Position:</label>
   						<div class="col-md-6">
   							<input style="width:100%" id="text_top_offset" type="range" min="0" max="500" value="50"/>
   						</div>
@@ -86,14 +95,14 @@
           <!-- Inputting the bottom text : START -->
   				<label class="control-label" for="text_bottom">Text 2:</label>
   				<div class="form-group">
-  					<input type="text" class="form-control" value="funny?" id="text_bottom" />
+  					<input type="text" class="form-control" value="have your fun!" id="text_bottom" />
   				</div>
           <!-- Inputting the bottom text : END -->
 
           <!-- Slider for Text-2 offset from bottom : START -->
   				<div class="form-group">
   					<div class="row">
-  						<label class="control-label col-md-4" for="text_bottom_offset">Offset from Top:</label>
+  						<label class="control-label col-md-4" for="text_bottom_offset">Bottom-Position</label>
   						<div class="col-md-6">
   							<input style="width:100%" id="text_bottom_offset" type="range" min="0" max="500" value="450"/>
   						</div>
@@ -101,18 +110,20 @@
   							<span id="text_bottom_offset__val">450</span>px
   						</div>
   					</div>
-  				</div>
+				  </div>
+				  
           <!-- Slider for Text-2 offset from bottom : END -->
 
   				<hr />
-  				<p>&nbsp;</p>
+				  <p>&nbsp;</p>
+	
 
           <!-- More Options Card : START -->
   				<div class="card">
 
             <!-- Options Card Header : START -->
   					<div class="card-header">
-  						<i class="fa fa-cogs" aria-hidden="true"></i> &nbsp; More options
+  						<i class="fa fa-cogs" aria-hidden="true"></i> &nbsp; Tool Your Way {/}
   					</div>
             <!-- Options Card Header : END -->
 
@@ -177,20 +188,19 @@
   									</div>
   								</div>
                   <!-- Slider For Stroke Width : END -->
-                  <!-- Slider For Stroke Width : START -->
+                  <!-- Slider For Color : START -->
   								<div class="form-group">
   									<div class="row">
-  										<label class="control-label col-md-3" for="text_stroke_color">Color</label>
+  										<label class="control-label col-md-3" for="text_color">Text Color:</label>
   										<div class="col-md-7">
-  											<input type="color" name="color" id="text_stroke_color" value="#fffff"/>
+  											<input type="color" id="text_color" />
   										</div>
   										<div class="col-md-2 setting-value">
-  											<span id="text_stroke_color">5</span>pt
+  											<span id="text_color"></span>
   										</div>
   									</div>
   								</div>
-                  <!-- Slider For Stroke Width : END -->
-  							</div>
+                  <!-- Slider For Color : END -->
   						</div>
   					</div>
             <!-- Options Card Body : END -->
@@ -200,14 +210,18 @@
         <!-- Right Part of page : END -->
   		</div>
   	</div>
-
+	  <footer>
+		<div class="col span-1-of-2">
+			<ul class="social-links">
+			  <li><a href="https://www.facebook.com/share"><i class="ion-social-facebook"></i></a></li>
+			  <li><a href="https://twitter.com/intent/tweet?url="><i class="ion-social-twitter"></i></a></li>
+			  <li><a href="https://www.instagram.com/share/"><i class="ion-social-instagram"></i></a></li>
+			</ul>
+		  </div>
+		
+	  </footer>
 	 <!-- JavaScript -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="jquery.color.min.js"></script>
+
 
 	</body>
 </html>

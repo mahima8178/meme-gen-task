@@ -1,6 +1,37 @@
+* {
+  margin: 0%;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+
+html,
 body{
   padding-top: 5%;
+  padding-block-start: 10%;
+  background-color: gainsboro;
+  border-top: 10px solid ;
+  border-bottom: 10px solid ;
+  border-bottom-color: #333;
+  border-right: 10px solid;
+  border-left: 10px solid;
+
+  margin: 10;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font: 30px ;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+header{
+  background-color: #333;
+  padding: 20px;
+  padding-right: 10px;
+  font-size: 150%;
+}
+
 
 .setting-value {
 	text-align: center;
@@ -8,23 +39,112 @@ body{
 }
 
 img#start-image {
-	position: absolute;
+  position: absolute;
+  size: 100cm;
 	left: -10000px;
-	top: -10000px;
+  top: -10000px;
 }
 
 #meme{
-  border:1px solid;
+  block-size: initial;
+  border:10px solid;
+  border-block-color: white;
+  border-style: initial;
 }
 
 .card{
-  border:2px solid !important;
+  padding: -30px;
+  position: center;
+  border: 5px solid;
 }
 
 .card-header{
   border-bottom: 2px solid !important;
+  padding: -30px;
+  font-weight: bold;
+  font-style: inherit;
+}
+.row {
+  max-width: 1100px;
+  margin: 15 auto;
+}
+
+.social-links {
+  list-style-type: none;
+  float: left;
+  color: black;
+  size: 5px;
 }
 
 label{
   font-weight: bold;
+  font-style: inherit;
 }
+footer {
+  background-color: #333;
+  padding: 50px;
+  padding-right: 10px;
+  font-size: 150%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+ display: inline-block;
+ margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 150%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-instagram {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+  color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+  color: #00aced;
+}
+
+.ion-social-instagram:hover {
+  color: #517fa4;
+}
+
